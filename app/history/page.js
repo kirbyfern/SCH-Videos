@@ -1,14 +1,8 @@
-// app/history/page.js
-import React from 'react';
-import { Box, Typography } from '@mui/material';
-
-const HistoryPage = () => {
+export default function HistoryPage() {
   return (
-    <Box sx={{ padding: '16px' }}>
-      <Typography variant="h4">History Page</Typography>
-      <Typography>Content coming soon!</Typography>
-    </Box>
+    <div style={{ marginLeft: '100px', padding: '20px' }}>
+      <h1>History Page</h1>
+      <p>Review your watch history and revisit past content.</p>
+    </div>
   );
-};
-
-export default SubscribePage;
+}

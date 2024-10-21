@@ -1,14 +1,8 @@
-// app/subscribe/page.js
-import React from 'react';
-import { Box, Typography } from '@mui/material';
-
-const SubscribePage = () => {
+export default function SubscribePage() {
   return (
-    <Box sx={{ padding: '16px' }}>
-      <Typography variant="h4">Subscribe Page</Typography>
-      <Typography>Content coming soon!</Typography>
-    </Box>
+    <div style={{ marginLeft: '100px', padding: '20px' }}>
+      <h1>Subscription Page</h1>
+      <p>Manage your subscriptions and follow new content creators.</p>
+    </div>
   );
-};
-
-export default SubscribePage;
+}

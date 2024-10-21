@@ -1,14 +1,8 @@
-// app/community/page.js
-import React from 'react';
-import { Box, Typography } from '@mui/material';
-
-const CommunityPage = () => {
+export default function CommunityPage() {
   return (
-    <Box sx={{ padding: '16px' }}>
-      <Typography variant="h4">Community Page</Typography>
-      <Typography>Content coming soon!</Typography>
-    </Box>
+    <div style={{ marginLeft: '100px', padding: '20px' }}>
+      <h1>Community Page</h1>
+      <p>Engage with the community and explore discussions.</p>
+    </div>
   );
-};
-
-export default SubscribePage;
+}

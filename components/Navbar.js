@@ -1,12 +1,13 @@
-"use client"; // This tells Next.js that this is a Client Component
+"use client"; // Ensures this is a Client Component
 
 import React from 'react';
-import { BottomNavigation, BottomNavigationAction } from '@mui/material';
+import { BottomNavigationAction } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
 import GroupIcon from '@mui/icons-material/Group';
 import HistoryIcon from '@mui/icons-material/History';
-import { useRouter } from 'next/navigation'; // Use next/navigation for app directory routing
+import AddCircleIcon from '@mui/icons-material/AddCircle'; // For the plus icon
+import { useRouter } from 'next/navigation'; // New useRouter from next/navigation
 
 const Navbar = () => {
   const [value, setValue] = React.useState(0);
@@ -34,23 +35,41 @@ const Navbar = () => {
   };
 
   return (
-    <BottomNavigation
-      value={value}
-      onChange={(event, newValue) => handleNavigation(newValue)}
-      showLabels
-      sx={{
-        width: '100%',
-        position: 'fixed',
-        bottom: 0,
-        backgroundColor: '#f3eaf9', // Customize the color to match your wireframe
-        zIndex: 1000,
-      }}
-    >
-      <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-      <BottomNavigationAction label="Subscribe" icon={<SubscriptionsIcon />} />
-      <BottomNavigationAction label="Community" icon={<GroupIcon />} />
-      <BottomNavigationAction label="History" icon={<HistoryIcon />} />
-    </BottomNavigation>
+    <div style={{ width: '80px', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: '#f3eaf9' }}>
+
+      {/* Plus Icon */}
+      <BottomNavigationAction
+        icon={<AddCircleIcon />}
+        onClick={() => alert('Add new item')} // Placeholder for add functionality
+        sx={{ marginTop: '20px', marginBottom: '40px', fontSize: '2rem' }}
+      />
+
+      {/* Vertical Navigation */}
+      <BottomNavigationAction
+        label="Home"
+        icon={<HomeIcon />}
+        onClick={() => handleNavigation(0)}
+        sx={{ marginBottom: '20px' }}
+      />
+      <BottomNavigationAction
+        label="Subscribe"
+        icon={<SubscriptionsIcon />}
+        onClick={() => handleNavigation(1)}
+        sx={{ marginBottom: '20px' }}
+      />
+      <BottomNavigationAction
+        label="Community"
+        icon={<GroupIcon />}
+        onClick={() => handleNavigation(2)}
+        sx={{ marginBottom: '20px' }}
+      />
+      <BottomNavigationAction
+        label="History"
+        icon={<HistoryIcon />}
+        onClick={() => handleNavigation(3)}
+        sx={{ marginBottom: '20px' }}
+      />
+    </div>
   );
 };
 
