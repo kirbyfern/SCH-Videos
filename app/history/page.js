@@ -2,7 +2,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 
-const SubscribePage = () => {
+const HistoryPage = () => {
   return (
     <Box sx={{ padding: '16px' }}>
       <Typography variant="h4">History Page</Typography>
